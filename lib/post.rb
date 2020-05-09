@@ -1,8 +1,9 @@
 class Post
   attr_accessor :name, :author
-
+  @@all
   def initialize(name)
     @name = name
+    @@all << self
   end
 
   def author_name
@@ -11,5 +12,8 @@ class Post
     else
       @author.name
     end
+  end
+  def self.all
+    
   end
 end
